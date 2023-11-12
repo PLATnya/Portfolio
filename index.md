@@ -3,8 +3,8 @@
 
 
 ### Projects
-- [Formatting the search process into interactive graph form for continues reusing(Codname:AdvancedSearch)](https://github.com/PLATnya/advanced-search) --- *in development*
-  ![](https://drive.google.com/uc?export=view&id=1LFeaqwoqC7vv0So6MgFPAv5RLts0WZ7y)  ![](https://drive.google.com/uc?export=view&id=1FqFVYEFrF63vVwFqXuBsa2DjUK5LVDHL)
+- [Formatting the search process into interactive graph form for continues reusing Codname:AdvancedSearch ](https://github.com/PLATnya/advanced-search) --- *in development*
+
 
 - [First person player content plugin for Unreal Engine](https://github.com/PLATnya/FirstPersonPlayerPlugin) --- *in development*
 - [Player interaction system comtent plugin for Unreal Engine](https://github.com/PLATnya/InteractionSystemPlugin) --- *in development*
