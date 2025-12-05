@@ -1,0 +1,118 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Section from '../components/Section.astro';
+import ProjectCard from '../components/ProjectCard.astro';
+
+const projects = [
+  {
+    title: "AdvancedSearch",
+    description: "Formatting the search process into interactive graph form for continues reusing",
+    link: "https://github.com/PLATnya/advanced-search",
+    status: "in development",
+    images: [
+      "https://drive.google.com/uc?export=view&id=1LFeaqwoqC7vv0So6MgFPAv5RLts0WZ7y",
+      "https://drive.google.com/uc?export=view&id=1FqFVYEFrF63vVwFqXuBsa2DjUK5LVDHL"
+    ],
+    tags: ["Search", "Graph", "Interactive"]
+  },
+  {
+    title: "First Person Player Plugin",
+    description: "First person player content plugin for Unreal Engine",
+    link: "https://github.com/PLATnya/FirstPersonPlayerPlugin",
+    status: "in development",
+    tags: ["Unreal Engine", "Plugin", "C++"]
+  },
+  {
+    title: "Interaction System Plugin",
+    description: "Player interaction system content plugin for Unreal Engine",
+    link: "https://github.com/PLATnya/InteractionSystemPlugin",
+    status: "in development",
+    tags: ["Unreal Engine", "Plugin", "C++"]
+  },
+  {
+    title: "Some games",
+    description: "I hope soon....",
+    link: "#",
+    status: "coming soon",
+    tags: ["Games"]
+  }
+];
+
+const education = [
+  {
+    title: "UE4 FPS Prototype",
+    description: "First person shooter prototype on Gameplay Ability System base (planned with coop integration)",
+    link: "https://github.com/PLATnya/SampleUnrealCoopShooter",
+    tags: ["Unreal Engine", "GAS", "FPS", "Coop"]
+  },
+  {
+    title: "Unity FPS Prototype",
+    description: "Unity First person shooter prototype",
+    link: "https://github.com/PLATnya/ZHV-2019ShotterGamePrototype",
+    tags: ["Unity", "FPS"]
+  },
+  {
+    title: "Unity Snake Runner",
+    description: "Unity snake 'runner' prototype",
+    link: "https://github.com/PLATnya/SnakePrototype",
+    tags: ["Unity", "Snake", "Runner"]
+  },
+  {
+    title: "Unity DOTS Prototype",
+    description: "Unity DOTS using prototype",
+    link: "https://github.com/PLATnya/RainPrototype",
+    tags: ["Unity", "DOTS", "ECS"]
+  },
+  {
+    title: "Python Voxel Engine",
+    description: "Voxel engine prototype base on PyOpenGL",
+    link: "https://github.com/PLATnya/VoxelEngine",
+    tags: ["Python", "PyOpenGL", "Voxel"]
+  },
+  {
+    title: "C# Go Game",
+    description: "Go game prototype",
+    link: "https://github.com/PLATnya/GoGame",
+    tags: ["C#", "Go", "Board Game"]
+  },
+  {
+    title: "Cocos2D Snake Game",
+    description: "Snake game on C++ Cocos2D engine",
+    link: "https://github.com/PLATnya/FlowerGame",
+    tags: ["C++", "Cocos2D", "Snake"]
+  }
+];
+---
+
+<Layout title="Vadym's Portfolio">
+  <main class="min-h-screen">
+    <Header />
+    
+    <Section title="Projects" id="projects">
+      {projects.map((project) => (
+        <ProjectCard {...project} />
+      ))}
+    </Section>
+    
+    <Section title="Education" id="education">
+      {education.map((project) => (
+        <ProjectCard {...project} />
+      ))}
+    </Section>
+    
+    <footer class="container mx-auto px-4 py-12 text-center text-gray-400">
+      <p>Built with ❤️ using Astro</p>
+    </footer>
+  </main>
+</Layout>
+
+<style>
+  main {
+    background: 
+      radial-gradient(circle at 20% 50%, rgba(251, 146, 60, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255, 119, 60, 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 40% 20%, rgba(255, 183, 77, 0.2) 0%, transparent 50%);
+  }
+</style>
+
