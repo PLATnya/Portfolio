@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind';
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind()],
-  site: 'https://PLATnya.github.io',
+  site: 'https://platnya.github.io',
   base: '/Portfolio',
   output: 'static',
 });
