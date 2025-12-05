@@ -3,12 +3,13 @@ interface Props {
   title: string;
   description?: string;
   link: string;
+  released?: boolean;
   status?: string;
   images?: string[];
   tags?: string[];
 }
 
-const { title, description, link, status, images = [], tags = [] } = Astro.props;
+const { title, description, link, released, status, images = [], tags = [] } = Astro.props;
 const isExternalLink = link !== "#";
 ---
 
@@ -58,7 +59,7 @@ const isExternalLink = link !== "#";
   
   {isExternalLink && (
     <div class="mt-4 flex items-center text-sm text-purple-300 group-hover:text-purple-200 transition-colors">
-      View on GitHub
+      {released ? "View on Website" : "View on GitHub"}
       <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
       </svg>

@@ -1,0 +1,5 @@
+# GitHub Pages configuration for Astro static site
+# This file prevents Jekyll from processing the site
+include: []
+exclude:
+  - "**/*"
