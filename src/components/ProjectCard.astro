@@ -1,22 +1,16 @@
 ---
-interface Props {
-  title: string;
-  description?: string;
-  link: string;
-  released?: boolean;
-  status?: string;
-  images?: string[];
-  tags?: string[];
-}
+import type { Project } from '../data/projects';
 
-const { title, description, link, released, status, images = [], tags = [] } = Astro.props;
-const isExternalLink = link !== "#";
+type Props = Project;
+
+const { title, description, link, status, released, images = [], tags = [] } = Astro.props;
+const isExternalLink = Boolean(link);
 ---
 
-<a 
-  href={link} 
-  target={isExternalLink ? "_blank" : undefined}
-  rel={isExternalLink ? "noopener noreferrer" : undefined}
+<a
+  href={link ?? '#'}
+  target={isExternalLink ? '_blank' : undefined}
+  rel={isExternalLink ? 'noopener noreferrer' : undefined}
   class="group block bg-white/10 backdrop-blur-lg rounded-xl p-6 hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-purple-400/50 hover:shadow-2xl hover:shadow-purple-500/20 hover:-translate-y-1"
 >
   <div class="flex items-start justify-between mb-3">
@@ -29,16 +23,16 @@ const isExternalLink = link !== "#";
       </span>
     )}
   </div>
-  
+
   {description && (
     <p class="text-gray-300 mb-4 text-sm">{description}</p>
   )}
-  
+
   {images.length > 0 && (
     <div class="grid grid-cols-2 gap-2 mb-4 rounded-lg overflow-hidden">
       {images.map((image) => (
-        <img 
-          src={image} 
+        <img
+          src={image}
           alt={title}
           class="w-full h-32 object-cover group-hover:scale-105 transition-transform duration-300"
           loading="lazy"
@@ -46,7 +40,7 @@ const isExternalLink = link !== "#";
       ))}
     </div>
   )}
-  
+
   {tags.length > 0 && (
     <div class="flex flex-wrap gap-2">
       {tags.map((tag) => (
@@ -56,14 +50,13 @@ const isExternalLink = link !== "#";
       ))}
     </div>
   )}
-  
+
   {isExternalLink && (
     <div class="mt-4 flex items-center text-sm text-purple-300 group-hover:text-purple-200 transition-colors">
-      {released ? "View on Website" : "View on GitHub"}
+      {released ? 'View on Website' : 'View on GitHub'}
       <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
       </svg>
     </div>
   )}
 </a>
-
