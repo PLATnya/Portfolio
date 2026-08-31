@@ -1,4 +1,4 @@
-export type ProjectCategory = 'projects' | 'games' | 'education';
+export type ProjectCategory = 'projects' | 'games' | 'game_prototypes';
 
 export interface Project {
   title: string;
@@ -11,15 +11,6 @@ export interface Project {
 }
 
 export const projects: Project[] = [
-  {
-    title: 'Fidereminend',
-    description:
-      'SOON. An AI-powered platform for learning on your own knowledge base. It will help users to learn new topics by making interactive and engaging learning experiences.',
-    link: 'https://github.com/PLATnya/Fidereminend',
-    tags: ['AI', 'RAG', 'Board', 'Python'],
-    images: [],
-    status: 'in development',
-  },
   {
     title: 'MAIDASH',
     description:
@@ -35,15 +26,36 @@ export const projects: Project[] = [
     status: 'in development',
   },
   {
+    title: 'Torcunta',
+    description: 'Actor based framework with unified comunication despite of environment',
+    link: 'https://github.com/PLATnya/torcunta',
+    tags: ['C++', 'Python', 'CMake', 'Rust'],
+    status: 'in progress, closed code'
+  },
+  {
+    title: 'ZedEmbrion',
+    description: 'Visual control flow developmend IDE based on ZED',
+    link: 'https://github.com/PLATnya/zed_embrion',
+    tags: ['Rust'],
+    status: 'in progress, closed code'
+  },
+    {
+    title: 'remouse',
+    description: 'Trying to reinvent human-mouse interaction',
+    link: 'https://github.com/PLATnya/remouse/tree/dev',
+    tags: ['Python'],
+    status: 'in progress'
+  },
+  {
     title: 'AdvancedSearch',
     description: 'Formatting the search process into interactive graph form for continues reusing',
     link: 'https://github.com/PLATnya/advanced-search',
-    status: 'stopped',
     images: [
       'https://lh3.googleusercontent.com/d/1LFeaqwoqC7vv0So6MgFPAv5RLts0WZ7y=w1000',
       'https://lh3.googleusercontent.com/d/1FqFVYEFrF63vVwFqXuBsa2DjUK5LVDHL=w1000',
     ],
     tags: ['Search', 'Graph', 'Interactive'],
+    status: 'stopped prototype'
   },
   {
     title: 'First Person Player Plugin',
@@ -59,6 +71,13 @@ export const projects: Project[] = [
     status: 'on pause',
     tags: ['Unreal Engine', 'Plugin', 'C++'],
   },
+  {
+    title: 'Python Voxel Engine',
+    description: 'Voxel engine prototype base on PyOpenGL',
+    link: 'https://github.com/PLATnya/VoxelEngine',
+    tags: ['Python', 'PyOpenGL', 'Voxel'],
+    status: 'stopped prototype'
+  }
 ];
 
 export const games: Project[] = [
@@ -103,7 +122,7 @@ export const games: Project[] = [
   },
 ];
 
-export const education: Project[] = [
+export const game_prototypes: Project[] = [
   {
     title: 'UE4 FPS Prototype',
     description: 'First person shooter prototype on Gameplay Ability System base (planned with coop integration)',
@@ -129,12 +148,6 @@ export const education: Project[] = [
     tags: ['Unity', 'DOTS', 'ECS'],
   },
   {
-    title: 'Python Voxel Engine',
-    description: 'Voxel engine prototype base on PyOpenGL',
-    link: 'https://github.com/PLATnya/VoxelEngine',
-    tags: ['Python', 'PyOpenGL', 'Voxel'],
-  },
-  {
     title: 'C# Go Game',
     description: 'Go game prototype',
     link: 'https://github.com/PLATnya/GoGame',
@@ -151,5 +164,5 @@ export const education: Project[] = [
 export const categories: { id: ProjectCategory; title: string; items: Project[] }[] = [
   { id: 'games', title: 'Games', items: games },
   { id: 'projects', title: 'Projects', items: projects },
-  { id: 'education', title: 'Education', items: education },
+  { id: 'game_prototypes', title: 'Game Prototypes', items: game_prototypes },
 ];
