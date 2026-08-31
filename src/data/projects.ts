@@ -149,7 +149,7 @@ export const education: Project[] = [
 ];
 
 export const categories: { id: ProjectCategory; title: string; items: Project[] }[] = [
-  { id: 'projects', title: 'Projects', items: projects },
   { id: 'games', title: 'Games', items: games },
+  { id: 'projects', title: 'Projects', items: projects },
   { id: 'education', title: 'Education', items: education },
 ];
